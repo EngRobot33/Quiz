@@ -25,3 +25,9 @@ class QuestionAdmin(admin.ModelAdmin):
     inlines = [AnswerInlineModel,]
 
 admin.site.register(Question, QuestionAdmin)
+
+
+class AnswerAdmin(admin.ModelAdmin):
+    list_display = ['answer_text', 'is_true',]
+
+admin.site.register(Answer, AnswerAdmin)
